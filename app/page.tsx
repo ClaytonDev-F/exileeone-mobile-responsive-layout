@@ -8,7 +8,7 @@ import '@reown/appkit-wallet-button/react';
 import { useAppKit } from '@reown/appkit/react';
 import { useDisconnect } from 'wagmi';
 
-const MY_CONTRACT_ADDRESS = "0xe92A6c8d1393992c45b97866C81BBFB13D1bd720";
+const MY_CONTRACT_ADDRESS = "0x8716D73c5D5a7158F6242dB5441694447315DC27";
 const USDT_CONTRACT_ADDRESS = "0x55d398326f99059fF775485246999027B3197955";
 
 const myContractABI = [
