@@ -97,7 +97,7 @@ export default function Home() {
 
     useEffect(() => {
         const calculateTokens = async () => {
-            if (selectedToken === 'BNB' && dollarAmount) {
+           if (selectedToken === 'BNB' && dollarAmount) {
                 await fetchBnbPrice();
                 if (bnbPrice > 0) {
                     const bnbToUsd = Number(dollarAmount) * bnbPrice;
@@ -178,9 +178,9 @@ export default function Home() {
         }
     };
     //@ts-ignore
-    const handleTokenSelect = (token) => {
-        setSelectedToken(token);
-    };
+   const handleTokenSelect = () => {
+    setSelectedToken('USDT');
+  };
     //@ts-ignore
     const formatAddress = (addr) => {
         if (!addr) return "";
@@ -246,25 +246,25 @@ export default function Home() {
                     </div>
                     <div className="flex w-full mb-2 mt-1">
                         <button
-                            onClick={() => handleTokenSelect('BNB')}
-                            className={`border rounded w-[33.33%] h-12 text-white font-bold flex items-center justify-center
-                      ${selectedToken === 'BNB' ? 'bg-gradient-to-r from-[#FF1CF7] to-[#00F0FF]' : ''
-                                }`}
+                            onClick={handleTokenSelect}
+                             className={`border rounded w-[33.33%] h-12 text-white font-bold flex items-center justify-center
+                            ${selectedToken === 'BNB' ? 'bg-gradient-to-r from-[#FF1CF7] to-[#00F0FF]' : ''
+                            }`}
                         >
                             <img src="/BNB.svg" alt="BNB" className="h-10 w-25 object-contain" />
                         </button>
                         <button
-                            onClick={() => handleTokenSelect('USDT')}
+                             onClick={handleTokenSelect}
                             className={`ml-2 border rounded w-[33.33%] h-12 text-white font-bold flex items-center justify-center
-                       ${selectedToken === 'USDT'
+                            ${selectedToken === 'USDT'
                                     ? 'bg-gradient-to-r from-[#FF1CF7] to-[#00F0FF]'
                                     : ''
-                                }`}
+                            }`}
                         >
                             <img src="/USDT.svg" alt="USDT" className="h-10 w-25 object-contain" />
                         </button>
                         <button
-                            onClick={() => handleTokenSelect('CREDIT')}
+                           onClick={handleTokenSelect}
                             className={`ml-2 border rounded w-[33.33%] h-12 text-white font-bold flex items-center justify-center
                        ${selectedToken === 'CREDIT'
                                     ? 'bg-gradient-to-r from-[#FF1CF7] to-[#00F0FF]'
@@ -359,7 +359,7 @@ export default function Home() {
                             
                         </>
                     )}
-                      {showError && error && <div className="text-red-500 mt-0">{error}</div>}
+                    {showError && error && <div className="text-red-500 mt-0">{error}</div>}
                 </div>
             </div>
         </div>
