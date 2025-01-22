@@ -77,7 +77,7 @@ export default function Home() {
     const formatPercentage = (percentage) => `${percentage.toFixed(2)}%`;
     //@ts-ignore
     const formatNumber = (number) => Number(number).toLocaleString('en-US');
-    const tokensSold = 14530379; //valor estatico
+    const tokensSold = 16642000; //valor estatico
 
     const fetchBnbPrice = async () => {
         try {
