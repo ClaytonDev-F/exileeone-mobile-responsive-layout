@@ -70,7 +70,7 @@ export default function Home() {
     const { open } = useAppKit();
     const { disconnect } = useDisconnect();
     const [bnbPrice, setBnbPrice] = useState(0);
-    const [usdRaised, setUsdRaised] = useState("14530"); //valor estático por enquanto
+    const [usdRaised, setUsdRaised] = useState("16642"); //valor estático por enquanto
 
     const percentage = (parseFloat(usdRaised) / MAX_USD_RAISED) * 100;
     //@ts-ignore
