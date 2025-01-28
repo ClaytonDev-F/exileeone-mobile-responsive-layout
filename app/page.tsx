@@ -70,14 +70,14 @@ export default function Home() {
     const { open } = useAppKit();
     const { disconnect } = useDisconnect();
     const [bnbPrice, setBnbPrice] = useState(0);
-    const [usdRaised, setUsdRaised] = useState("16642"); //valor estático por enquanto
+    const [usdRaised, setUsdRaised] = useState("17680"); //valor estático por enquanto
 
     const percentage = (parseFloat(usdRaised) / MAX_USD_RAISED) * 100;
     //@ts-ignore
     const formatPercentage = (percentage) => `${percentage.toFixed(2)}%`;
     //@ts-ignore
     const formatNumber = (number) => Number(number).toLocaleString('en-US');
-    const tokensSold = 16642000; //valor estatico
+    const tokensSold = 17680000; //valor estatico
 
     const fetchBnbPrice = async () => {
         try {
