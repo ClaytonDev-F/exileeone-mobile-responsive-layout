@@ -291,7 +291,7 @@ export default function Home() {
                         <input
                             ref={inputRef}
                             type="number"
-                            placeholder=" Investiment"
+                            placeholder=" Investment"
                             value={dollarAmount}
                             onChange={(e) => setDollarAmount(e.target.value)}
                             className="border rounded w-[67%] text-black placeholder-gray-500 focus:outline-none [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none pl-2"
